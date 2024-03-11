@@ -111,7 +111,9 @@ function App() {
               </td>
             </tr>
             {buttons.map((row,index) => 
-                <ButtonsRow key={index} buttons={row}/>
+                <ButtonsRow key={index} 
+                buttons={row}
+                functions={buttonsFunctions}/>
             )}
           </tbody>
         </table>

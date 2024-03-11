@@ -1,11 +1,25 @@
-export const Button = ({class: className, label, function: action, columns}) =>{
+import { buttonsClasses } from "../assets/buttonsClasses"
+
+
+export const Button = ({
+    class: className, 
+    label, 
+    function: action, 
+    columns,
+    functions
+}) =>{
     return(
-        <button
+        <td colSpan={columns}>
+            <button
                 type='button'
-                className={className}
-                onClick={action}
+                className={buttonsClasses[className]}
+                onClick={()=>functions[action](label)}
                 >
                   {label}
-                  </button>
+            </button>
+        </td>
+        
     )
 }
+
+
