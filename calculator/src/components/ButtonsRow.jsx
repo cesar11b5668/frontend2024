@@ -1,4 +1,5 @@
 
+import { buttons } from "../assets/buttons"
 import { Button } from "./Button"
 
 export const ButtonsRow = ({buttons, functions}) => {
@@ -17,3 +18,8 @@ export const ButtonsRow = ({buttons, functions}) => {
 }
 
 export default Button
+
+ButtonsRow.propTypes = {
+  buttons: buttons,
+  functions: buttons
+}

@@ -76,7 +76,11 @@ function App() {
     if (display.operator=== '') {
       return
     }
-    let result = eval(display.previousValue + display.operator + display.value)
+
+    const operator = display.operator==='x'?'*':
+                      display.operator==='%'?'/100*':display.operator
+
+    let result = eval(display.previousValue + operator + display.value)
     result = result + ""
     setDisplay({
       ...display,

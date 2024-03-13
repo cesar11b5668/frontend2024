@@ -113,6 +113,8 @@ export const buttons = [[{
       {
         class: 'operator',
         label: '=',
+        function: 'calculate',
+        columns: 1
       }
        
     ]

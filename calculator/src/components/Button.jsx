@@ -23,3 +23,10 @@ export const Button = ({
 }
 
 
+Button.propTypes = {
+    class: String,
+    label: String,
+    function: String,
+    columns: Number,
+    functions: Object
+}
